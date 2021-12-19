@@ -74,10 +74,16 @@ body {
     .header {
         font-size: 10px;
     }
+    .content {
+        margin-top: 25px !important;
+    }
 }
 @media (max-width: 375px) {
     .header {
         font-size: 2.381vw;
+    }
+    .content {
+        margin-top: 6vw !important;
     }
 }
 
