@@ -1,3 +1,5 @@
+<!-- Test page !!! -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,15 +57,35 @@
 </div>
 <!-- main content   -->
 <div class="content-wrap">
-<div>
-    <a class="nav-btn a-btn lang-btn" href="pages/login.html">Log in</a>
-</div>
-<div>
-    <a class="nav-btn a-btn lang-btn" href="pages/reg.html">Reg</a>
-</div>
-<div>
-    <a class="nav-btn a-btn lang-btn" href="pages/fillflow/1.html">Формочка 1</a>
+<div class="content container Reg Test">
+    <a class="test-link" href="pages/login.html">Log in</a>
+    <a class="test-link" href="pages/reg.html">Reg</a>
+    <a class="test-link" href="pages/fillflow/1.html">Формочка 1</a>
 </div>
 </div>
 </body>
 </html>
+
+<style>
+    .test-link {
+        height: 3.125em;
+        width: 10em;
+        justify-content: center;
+        height: 3.125em;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+        /*box-shadow: 0 0 5px 3px rgb(0 0 0 / 20%);*/
+        /*border: 1px solid transparent;*/
+        border-radius: 0.25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .Test {
+        display: flex;
+        justify-content: space-around;
+    }
+</style>
