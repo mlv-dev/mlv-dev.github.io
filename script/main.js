@@ -17,3 +17,5 @@ $(document).ready(function(){
         "color" : "rgba(var(--bs-danger-rgb),var(--bs-text-opacity))"
     });
 });
+
+$("form").dirtyForms();
