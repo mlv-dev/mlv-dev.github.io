@@ -138,7 +138,7 @@ $(document).ready(function(){
         const obj = translations[lang];
         return key in obj ? translations[lang][key] : key;
     }
-
+    const max_level = 5;
     let current_state = {}
     // on create: (only first type)
     $("#type1").append('<option selected disabled value="none"></option>')
@@ -146,9 +146,12 @@ $(document).ready(function(){
         const key_text = keyToText(key);
         $("#type1").append('<option value="' + key + '">' + key_text + '</option>')
     }
+    for(let i = 2; i <= max_level; i++) {
+        const elem = "#type" + i;
+        $(elem).parent().hide();
+    }
     // on change:
     $(".vehicle-form > div > select").on("change", (event) => {
-        const max_level = 5;
         const level = Number(event.currentTarget.id.substring(4));
         const this_key = event.currentTarget.value;
         current_state[level] = this_key;
@@ -162,7 +165,9 @@ $(document).ready(function(){
             for (let i = level + 1; i <= max_level; i++) {
                 const elem = "#type" + i;
                 $(elem).empty();
+                $(elem).parent().hide();
             }
+            $(next_elem).parent().show();
             $(next_elem).append('<option selected disabled value="none"></option>')
             for (let key of Object.keys(obj)) {
                 const key_text = keyToText(key);
