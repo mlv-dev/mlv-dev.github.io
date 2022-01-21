@@ -1,10 +1,45 @@
 <nav class="fillflow-navbar-wrap">
   <ul class="fillflow-navbar">
-    <li><a href="1.html" class="btn-primary">1</a></li>
-    <li><a href="2.html" class="btn-success">2</a></li>
-    <li><a href="3.html" class="btn-warning">3</a></li>
-    <li><a href="4.html" class="btn-danger">4</a></li>
-    <li><a href="5.html" class="btn-info">5</a></li>
+    <li>
+      <div class="btn-group">
+        <a id="elem1" href="javascript:;" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Команда
+        </a>
+        <div class="dropdown-menu">
+         <a class="dropdown-item" href="1.html">Команда 1</a>
+         <a class="dropdown-item" href="1.html">Команда 2</a>
+         <a class="dropdown-item" href="1.html">Команда 3</a>
+        </div>
+      </div>
+     </li>
+     <li>
+       <div class="btn-group">
+<!--         <button type="button" class="btn btn-danger">Action</button>-->
+        <a href="2.html" class="btn-success btn">Транспорт 1</a>
+        <button type="button" class="btn btn-success t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <span class="sr-only"></span>
+        </button>
+         <div class="dropdown-menu">
+           <a class="dropdown-item" href="#">Транспорт 1</a>
+           <a class="dropdown-item" href="#">Транспорт 2</a>
+           <a class="dropdown-item" href="#">Транспорт 3</a>
+         </div>
+       </div>
+     </li>
+     <li>
+      <div class="btn-group">
+          <a href="3.html" class="btn-warning">Экипаж 1</a>
+          <button type="button" class="btn btn-warning current-page t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only"></span>
+          </button>
+          <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Экипаж 1</a>
+              <a class="dropdown-item" href="#">Экипаж 2</a>
+              <a class="dropdown-item" href="#">Экипаж 3</a>
+          </div>
+      </div>
+ <!--    <li><a href="4.html" class="btn-danger">4</a></li>-->
+<!--    <li><a href="5.html" class="btn-info">5</a></li>-->
   </ul>
 </nav>
 

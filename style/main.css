@@ -272,3 +272,6 @@ form > div {
     /*border-color: #0a58ca;*/
     z-index: 1 !important;
 }
+.t-edge {
+    width: 36px;
+}
