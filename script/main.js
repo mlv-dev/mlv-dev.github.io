@@ -85,43 +85,43 @@ $(document).ready(function(){
                 }
             }
         },
-        press: {
-            race: {
-                car: {
-                    t6_3_5: {
-                        _4x4: {},
-                        van: {},
-                        camper: {},
-                        small_truck: {},
-                        small_bus: {},
-                    }
-                }
-            },
-            service: {
-                car: {
-                    t6_3_5: {
-                        _4x4: {},
-                        van: {},
-                        camper: {},
-                        small_truck: {},
-                        small_bus: {},
-                    }
-                }
-            }
-        },
-        tourists: {
-            service: {
-                car: {
-                    t6_3_5: {
-                        _4x4: {},
-                        van: {},
-                        camper: {},
-                        small_truck: {},
-                        small_bus: {},
-                    }
-                }
-            }
-        }
+        // press: {
+        //     race: {
+        //         car: {
+        //             t6_3_5: {
+        //                 _4x4: {},
+        //                 van: {},
+        //                 camper: {},
+        //                 small_truck: {},
+        //                 small_bus: {},
+        //             }
+        //         }
+        //     },
+        //     service: {
+        //         car: {
+        //             t6_3_5: {
+        //                 _4x4: {},
+        //                 van: {},
+        //                 camper: {},
+        //                 small_truck: {},
+        //                 small_bus: {},
+        //             }
+        //         }
+        //     }
+        // },
+        // tourists: {
+        //     service: {
+        //         car: {
+        //             t6_3_5: {
+        //                 _4x4: {},
+        //                 van: {},
+        //                 camper: {},
+        //                 small_truck: {},
+        //                 small_bus: {},
+        //             }
+        //         }
+        //     }
+        // }
     }
     const translations = {
         ru: {
@@ -139,6 +139,7 @@ $(document).ready(function(){
         return key in obj ? translations[lang][key] : key;
     }
     const max_level = 5;
+    const fadeout_delay = 500;
     let current_state = {}
     // on create: (only first type)
     $("#type1").append('<option selected disabled value="none"></option>')
@@ -165,9 +166,11 @@ $(document).ready(function(){
             for (let i = level + 1; i <= max_level; i++) {
                 const elem = "#type" + i;
                 $(elem).empty();
-                $(elem).parent().hide();
+                if (i !== level + 1) {
+                    $(elem).parent().slideUp(fadeout_delay);
+                }
             }
-            $(next_elem).parent().show();
+            $(next_elem).parent().slideDown(fadeout_delay);
             $(next_elem).append('<option selected disabled value="none"></option>')
             for (let key of Object.keys(obj)) {
                 const key_text = keyToText(key);
