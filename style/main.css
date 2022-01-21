@@ -223,7 +223,7 @@ form > div {
 
 /* -----------------------------------*/
 .Fillflow-page {
-    width: 1000px;
+    width: 700px !important;
 }
 .fillflow-navbar {
     display: flex;
@@ -274,4 +274,7 @@ form > div {
 }
 .t-edge {
     width: 36px;
+}
+.vehicle-form > div > select {
+
 }
