@@ -20,6 +20,8 @@ document.getElementById('input-id').addEventListener('change', (e) => {
 
     new Compressor(file, {
         quality: 0,
+        width: 640,
+        height: 480,
 
         // The compression process is asynchronous,
         // which means you have to access the `result` in the `success` hook function.
