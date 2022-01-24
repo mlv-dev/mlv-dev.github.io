@@ -25,10 +25,13 @@ body {
     width: auto;
 }
 .feedback {
-    display: flex;
-    align-items: center;
     margin-right: 20px;
     padding: 0 10px;
+    height: 50px;
+}
+.exit {
+    margin-left: 20px;
+    padding: 0 5px;
     height: 50px;
 }
 .feedback-text {
@@ -37,7 +40,13 @@ body {
     margin-left: 10px;
     text-align: center
 }
-.feedback-logo {
+.exit-text {
+    font-size: 1em;
+    width: 4.375em;
+    margin-left: 10px;
+    text-align: center
+}
+.nav-icon {
     max-height: 2.5em;
     width: auto;
 }

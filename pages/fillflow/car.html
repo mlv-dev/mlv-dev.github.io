@@ -38,7 +38,7 @@
         <div class="navbar-right">
             <!--suppress HtmlUnknownTarget -->
             <a class="feedback a-btn nav-btn" href="/feedback">
-                <img class="feedback-logo" src="https://i.ibb.co/nBSPHXR/free-icon-carrier-pigeon-6258758-2.png" alt="Feedback">
+                <img class="nav-icon" src="https://i.ibb.co/nBSPHXR/free-icon-carrier-pigeon-6258758-2.png" alt="Feedback">
                 <div class="feedback-text">Обратная связь</div>
             </a>
             <div class="lang-buttons btn-group btn-group-toggle">
@@ -51,6 +51,10 @@
                     <div class="lang-name">EN</div>
                 </a>
             </div>
+            <!--suppress HtmlUnknownTarget -->
+            <a class="exit a-btn nav-btn" href="/exit">
+                <img class="nav-icon" src="https://download.flaticon.com/download/icon/2081479?icon_id=2081479&author=280&team=280&keyword=Exit&pack=2081355&style=0&style_id=8&format=png&color=%23000000&colored=2&size=512&selection=1&premium=0&type=standard" alt="Exit">
+            </a>
         </div>
     </div>
 </div>
@@ -61,82 +65,74 @@
       <ul class="fillflow-navbar">
         <li>
           <div class="btn-group">
-            <a id="elem1" href="javascript:;" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Команда
-            </a>
-            <div class="dropdown-menu">
-             <a class="dropdown-item" href="1.html">Команда 1</a>
-             <a class="dropdown-item" href="1.html">Команда 2</a>
-             <a class="dropdown-item" href="1.html">Команда 3</a>
+            <a href="requisites.html" class="btn-primary btn">Команда 1</a>
+            <button type="button" class="btn btn-primary t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><div class="dropdown-menu">
+              <a class="dropdown-item" href="1.html">Команда 1</a>
+              <a class="dropdown-item" href="1.html">Команда 2</a>
+              <a class="dropdown-item" href="1.html">Команда 3</a>
             </div>
           </div>
-         </li>
-         <li>
-           <div class="btn-group">
-    <!--         <button type="button" class="btn btn-danger">Action</button>-->
-            <a href="2.html" class="btn-success btn">Транспорт 1</a>
-            <button type="button" class="btn btn-success t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               <span class="sr-only"></span>
-            </button>
-             <div class="dropdown-menu">
-               <a class="dropdown-item" href="#">Транспорт 1</a>
-               <a class="dropdown-item" href="#">Транспорт 2</a>
-               <a class="dropdown-item" href="#">Транспорт 3</a>
-             </div>
-           </div>
-         </li>
-         <li>
+        </li>
+        <li>
           <div class="btn-group">
-              <a href="3.html" class="btn-warning">Экипаж 1</a>
-              <button type="button" class="btn btn-warning current-page t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only"></span>
-              </button>
-              <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Экипаж 1</a>
-                  <a class="dropdown-item" href="#">Экипаж 2</a>
-                  <a class="dropdown-item" href="#">Экипаж 3</a>
-              </div>
+            <a href="car.html" class="btn-success btn">Транспорт 1</a>
+            <button type="button" class="btn btn-success t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Транспорт 1</a>
+              <a class="dropdown-item" href="#">Транспорт 2</a>
+              <a class="dropdown-item" href="#">Транспорт 3</a>
+            </div>
           </div>
-         <li><a href="car.html" class="btn-danger">CAR</a></li>
-    <!--    <li><a href="5.html" class="btn-info">5</a></li>-->
+        </li>
+        <li>
+          <div class="btn-group">
+            <a href="crew.html" class="btn-warning">Экипаж 1</a>
+            <button type="button" class="btn btn-warning current-page t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Экипаж 1</a>
+              <a class="dropdown-item" href="#">Экипаж 2</a>
+              <a class="dropdown-item" href="#">Экипаж 3</a>
+            </div>
+          </div>
+        <li><a href="file.html" class="btn-danger">FILE</a></li>
       </ul>
     </nav>
     
     <script defer src="/script/fillflow.js"></script>
-    <h4 class="headline">МАШЫНА</h4>
-    <form class="vehicle-form prevent-unsaved">
+    <h4 class="headline">Данные ТС</h4>
+    <form class="vehicle-form prevent-unsaved" method="post">
         <div class="form-group">
-            <label for="data1">Марка</label>
-            <input type="text" class="form-control" id="data1" >
+            <label for="Title">Название</label>
+            <input type="text" class="form-control" id="Title" >
         </div>
         <div class="form-group">
-            <label for="data2">Модель</label>
-            <input type="text" class="form-control" id="data2" >
+            <label for="TitleBrand">Марка ТС</label>
+            <input type="text" class="form-control" id="TitleBrand" >
         </div>
         <div class="form-group">
-            <label for="data3">Название</label>
-            <input type="text" class="form-control" id="data3" >
+            <label for="TitleModel">Модель ТС</label>
+            <input type="text" class="form-control" id="TitleModel" >
+        </div>
+        <!---->
+        <div class="form-group">
+            <label for="Category">Категория участия</label>
+            <select num='1' class="form-select" id="Category"></select>
         </div>
         <div class="form-group">
-            <label for="type1">Категория участия</label>
-            <select class="form-select" id="type1"></select>
-            </select>
+            <label for="Group">Группа</label>
+            <select num='2' class="form-select" id="Group"></select>
         </div>
         <div class="form-group">
-            <label for="type2">Группа</label>
-            <select class="form-select" id="type2"></select>
+            <label for="Type">Тип авто</label>
+            <select num='3' class="form-select" id="Type"></select>
         </div>
         <div class="form-group">
-            <label for="type3">Тип ТС</label>
-            <select class="form-select" id="type3"></select>
+            <label for="CategoryCar">Категория авто</label>
+            <select num='4' class="form-select" id="CategoryCar"></select>
         </div>
         <div class="form-group">
-            <label for="type4">Категория ТС</label>
-            <select class="form-select" id="type4"></select>
-        </div>
-        <div class="form-group">
-            <label for="type5">Подкатегория ТС</label>
-            <select class="form-select" id="type5"></select>
+            <label for="SubCategoryCar">Подкатегория авто</label>
+            <select num='5' class="form-select" id="SubCategoryCar"></select>
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-danger">Вперёд!</button>

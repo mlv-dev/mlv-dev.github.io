@@ -38,7 +38,7 @@
         <div class="navbar-right">
             <!--suppress HtmlUnknownTarget -->
             <a class="feedback a-btn nav-btn" href="/feedback">
-                <img class="feedback-logo" src="https://i.ibb.co/nBSPHXR/free-icon-carrier-pigeon-6258758-2.png" alt="Feedback">
+                <img class="nav-icon" src="https://i.ibb.co/nBSPHXR/free-icon-carrier-pigeon-6258758-2.png" alt="Feedback">
                 <div class="feedback-text">Обратная связь</div>
             </a>
             <div class="lang-buttons btn-group btn-group-toggle">
@@ -51,6 +51,10 @@
                     <div class="lang-name">EN</div>
                 </a>
             </div>
+            <!--suppress HtmlUnknownTarget -->
+            <a class="exit a-btn nav-btn" href="/exit">
+                <img class="nav-icon" src="https://download.flaticon.com/download/icon/2081479?icon_id=2081479&author=280&team=280&keyword=Exit&pack=2081355&style=0&style_id=8&format=png&color=%23000000&colored=2&size=512&selection=1&premium=0&type=standard" alt="Exit">
+            </a>
         </div>
     </div>
 </div>
@@ -61,44 +65,37 @@
       <ul class="fillflow-navbar">
         <li>
           <div class="btn-group">
-            <a id="elem1" href="javascript:;" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Команда
-            </a>
-            <div class="dropdown-menu">
-             <a class="dropdown-item" href="1.html">Команда 1</a>
-             <a class="dropdown-item" href="1.html">Команда 2</a>
-             <a class="dropdown-item" href="1.html">Команда 3</a>
+            <a href="1.html" class="btn-primary btn">Команда 1</a>
+            <button type="button" class="btn btn-primary t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><div class="dropdown-menu">
+              <a class="dropdown-item" href="1.html">Команда 1</a>
+              <a class="dropdown-item" href="1.html">Команда 2</a>
+              <a class="dropdown-item" href="1.html">Команда 3</a>
             </div>
           </div>
-         </li>
-         <li>
-           <div class="btn-group">
-    <!--         <button type="button" class="btn btn-danger">Action</button>-->
-            <a href="2.html" class="btn-success btn">Транспорт 1</a>
-            <button type="button" class="btn btn-success t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               <span class="sr-only"></span>
-            </button>
-             <div class="dropdown-menu">
-               <a class="dropdown-item" href="#">Транспорт 1</a>
-               <a class="dropdown-item" href="#">Транспорт 2</a>
-               <a class="dropdown-item" href="#">Транспорт 3</a>
-             </div>
-           </div>
-         </li>
-         <li>
+        </li>
+        <li>
           <div class="btn-group">
-              <a href="3.html" class="btn-warning">Экипаж 1</a>
-              <button type="button" class="btn btn-warning current-page t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="sr-only"></span>
-              </button>
-              <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Экипаж 1</a>
-                  <a class="dropdown-item" href="#">Экипаж 2</a>
-                  <a class="dropdown-item" href="#">Экипаж 3</a>
-              </div>
+            <a href="2.html" class="btn-success btn">Транспорт 1</a>
+            <button type="button" class="btn btn-success t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Транспорт 1</a>
+              <a class="dropdown-item" href="#">Транспорт 2</a>
+              <a class="dropdown-item" href="#">Транспорт 3</a>
+            </div>
           </div>
-         <li><a href="car.html" class="btn-danger">CAR</a></li>
-    <!--    <li><a href="5.html" class="btn-info">5</a></li>-->
+        </li>
+        <li>
+          <div class="btn-group">
+            <a href="3.html" class="btn-warning">Экипаж 1</a>
+            <button type="button" class="btn btn-warning current-page t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Экипаж 1</a>
+              <a class="dropdown-item" href="#">Экипаж 2</a>
+              <a class="dropdown-item" href="#">Экипаж 3</a>
+            </div>
+          </div>
+        <li><a href="car.html" class="btn-danger">CAR</a></li>
+        <li><a href="file.html" class="btn-info">FILE</a></li>
       </ul>
     </nav>
     
