@@ -105,41 +105,61 @@
     <div class="mobile-open-navbar"><</div>
     <script defer src="/script/fillflow2.js"></script>
     <div class="content Fillflow-page">
-        <h4 class="headline">Данные ТС</h4>
+
         <form class="vehicle-form prevent-unsaved" method="post">
+            <h4 class="headline">Реквезиты</h4>
             <div class="form-group">
-                <label for="Title">Название</label>
+                <label for="Title">Название команды</label>
                 <input type="text" class="form-control" id="Title" name="Title">
             </div>
             <div class="form-group">
-                <label for="TitleBrand">Марка ТС</label>
-                <input type="text" class="form-control" id="TitleBrand" name="TitleBrand">
+                <label for="Country">Страна</label>
+                <select id="Country" name="Country" class="form-select">
+                    <option selected="selected" value="Россия">Россия</option>
+                    <option value="Беларусь">Беларусь</option>
+                    <option value="Франция">Франция</option>
+                    <option value="Китай">Китай</option>
+                </select>
             </div>
-            <div class="form-group">
-                <label for="TitleModel">Модель ТС</label>
-                <input type="text" class="form-control" id="TitleModel" name="TitleModel">
+            <div class="pay-block">
+                <div class="form-group">
+                    <label for="Index">Индекс</label>
+                    <input type="text" class="form-control" id="Index" name="Index">
+                </div>
+                <div class="form-group">
+                    <label for="City">Город</label>
+                    <input type="text" class="form-control" id="Index" name="Index">
+                </div>
+                <div class="form-group">
+                    <label for="Address">Адрес</label>
+                    <input type="text" class="form-control" id="Address" name="Address">
+                </div>
+                <div class="form-group">
+                    <label for="CompanyTitle">Название организации или ИП</label>
+                    <input type="text" class="form-control" id="CompanyTitle" name="CompanyTitle">
+                </div>
+                <div class="form-group">
+                    <label for="BIK">БИК</label>
+                    <input type="text" class="form-control" id="BIK" name="BIK">
+                </div>
+                <div class="form-group">
+                    <label for="BankTitle">Название банка</label>
+                    <input type="text" class="form-control" id="BankTitle" name="BankTitle">
+                </div>
+                <div class="form-group">
+                    <label for="KS">к/с</label>
+                    <input type="text" class="form-control" id="KS" name="KS">
+                </div>
+                <div class="form-group">
+                    <label for="INN">ИНН</label>
+                    <input type="text" class="form-control" id="INN" name="INN">
+                </div>
+                <div class="form-group">
+                    <label for="RS">р/с</label>
+                    <input type="text" class="form-control" id="RS" name="RS">
+                </div>
             </div>
-            <!---->
-            <div class="form-group">
-                <label for="Category">Категория участия</label>
-                <select num='1' class="form-select" id="Category" name="Category"></select>
-            </div>
-            <div class="form-group">
-                <label for="Group">Группа</label>
-                <select num='2' class="form-select" id="Group" name="Group"></select>
-            </div>
-            <div class="form-group">
-                <label for="Type">Тип авто</label>
-                <select num='3' class="form-select" id="Type" name="Type"></select>
-            </div>
-            <div class="form-group">
-                <label for="CategoryCar">Категория авто</label>
-                <select num='4' class="form-select" id="CategoryCar"  name="CategoryCar"></select>
-            </div>
-            <div class="form-group">
-                <label for="SubCategoryCar">Подкатегория авто</label>
-                <select num='5' class="form-select" id="SubCategoryCar" name="SubCategoryCar"></select>
-            </div>
+            <!-- !!! -->
             <div class="form-group">
                 <button type="submit" class="btn btn-danger">Вперёд!</button>
             </div>
@@ -150,4 +170,4 @@
 </body>
 </html>
 
-<script defer src="/script/car.js"></script>
+<script defer src="/script/fillflow-content.js"></script>

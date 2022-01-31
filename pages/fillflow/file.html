@@ -60,57 +60,64 @@
 </div>
 <!-- main content   -->
 <div class="content-wrap">
-
 <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.7/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
 
-<div class="content container Fillflow-page">
-  <nav class="fillflow-navbar-wrap">
-    <ul class="fillflow-navbar">
-      <li>
+<div class="page-wrap container">
+  <div class="side-navbar">
+    <div class="team-gp gp">
+      <div class="team-el el">
         <div class="btn-group">
-          <a href="requisites.html" class="btn-primary btn">Команда 1</a>
-          <button type="button" class="btn btn-primary t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button><div class="dropdown-menu">
-            <a class="dropdown-item" href="1.html">Команда 1</a>
-            <a class="dropdown-item" href="1.html">Команда 2</a>
-            <a class="dropdown-item" href="1.html">Команда 3</a>
+          <a href="requisites.html" class="btn-danger btn">Команда 1</a>
+          <button type="button" class="btn btn-danger t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+        </div>
+        <div class="car-gp gp">
+          <div class="car-el el">
+            <div class="btn-group">
+              <a href="car.html" class="btn-warning btn">Машина 1</a>
+              <button type="button" class="btn btn-warning t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+            </div>
+            <div class="crew-gp gp">
+              <div class="crew-el el">
+                <div class="btn-group">
+                  <a href="crew.html" class="btn-success btn">Человек 1</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </li>
-      <li>
+      </div>
+      <div class="team-el el">
         <div class="btn-group">
-          <a href="car.html" class="btn-success btn">Транспорт 1</a>
-          <button type="button" class="btn btn-success t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Транспорт 1</a>
-            <a class="dropdown-item" href="#">Транспорт 2</a>
-            <a class="dropdown-item" href="#">Транспорт 3</a>
-          </div>
+          <a href="requisites.html" class="btn-danger btn">Команда 2</a>
+          <button type="button" class="btn btn-danger t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
         </div>
-      </li>
-      <li>
+        <div class="car-gp gp">
+          Empty
+        </div>
+      </div>
+      <div class="team-el el">
         <div class="btn-group">
-          <a href="crew.html" class="btn-warning">Экипаж 1</a>
-          <button type="button" class="btn btn-warning current-page t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Экипаж 1</a>
-            <a class="dropdown-item" href="#">Экипаж 2</a>
-            <a class="dropdown-item" href="#">Экипаж 3</a>
-          </div>
-        </div>
-      <li><a href="file.html" class="btn-danger">FILE</a></li>
-    </ul>
-  </nav>
-  
-  <script defer src="/script/fillflow.js"></script>
-  <h4 class="headline">Файл аплоад</h4>
-  <form class="prevent-unsaved" method="post">
-
-    <input data-show-upload="false" data-allowed-file-types="images" id="input-id" name="input-id" type="file" class="file" data-browse-on-zone-click="true" accept="image/*" >
-
-    <div class="form-group">
-      <button type="submit" class="btn btn-danger">Вперёд!</button>
+          <a href="file.html" class="btn-info btn">File</a>
+         </div>
+      </div>
     </div>
-  </form>
+  
+  
+  </div>
+  <div class="mobile-open-navbar"><</div>
+  <script defer src="/script/fillflow2.js"></script>
+  <div class="content Fillflow-page">
+
+    <h4 class="headline">Файл аплоад</h4>
+    <form class="prevent-unsaved" method="post">
+
+      <input data-show-upload="false" data-allowed-file-types="images" id="input-id" name="input-id" type="file" class="file" data-browse-on-zone-click="true" accept="image/*" >
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-danger">Вперёд!</button>
+      </div>
+    </form>
+  </div>
 </div>
 </div>
 </body>
@@ -119,3 +126,5 @@
 <script defer src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.7/js/fileinput.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/compressorjs/1.1.1/compressor.min.js" integrity="sha512-VaRptAfSxXFAv+vx33XixtIVT9A/9unb1Q8fp63y1ljF+Sbka+eMJWoDAArdm7jOYuLQHVx5v60TQ+t3EA8weA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script defer src="/script/file.js"></script>
+
+\
