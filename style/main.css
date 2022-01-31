@@ -232,7 +232,7 @@ form > div {
 
 /* -----------------------------------*/
 .Fillflow-page {
-    width: 700px !important;
+    max-width: 900px !important;
 }
 .fillflow-navbar {
     display: flex;
@@ -288,25 +288,30 @@ form > div {
 
 }
 /* ----------------------------- */
+.Fillflow-page-content {
+    width: 100%;
+}
 .side-navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: none; /* at least width */
-
-    margin-top: 50px;
-    padding: 30px !important;
-    background: white;
-    color: rgb(13, 10, 70);
-    box-shadow: 0 0 20px 5px rgb(124 57 57 / 8%);
-    font-weight: 400;
+    padding-right: 60px;
+    flex: none;
 }
 @media (max-width: 768px) {
-    .side-navbar {
-        display: none;
-    }
     .mobile-open-navbar {
         /*display: flex !important;*/
+    }
+    .page-wrap {
+        flex-direction: column;
+    }
+    .btn-group {
+        width: 100% !important;
+    }
+    .team-gp {
+        width: 100%;
+    }
+    .side-navbar {
+        margin-top: 10px;
+        width: 100%;
+        padding-right: 0;
     }
 }
 .mobile-open-navbar {
@@ -317,22 +322,16 @@ form > div {
     justify-content: center;
 }
 .side-navbar .el {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .side-navbar .gp {
-    margin-top: 5px;
+    margin-top: 10px;
     margin-left: 20px;
 
     /*box-shadow: 0 0 20px 5px rgb(124 57 57 / 8%);*/
 }
-.team-el > .btn-group {
-    width: 200px;
-}
-.car-el > .btn-group {
-    width: 180px;
-}
-.crew-el > .btn-group {
-    width: 160px;
+.side-navbar .btn-group {
+    width: 100%;
 }
 .team-gp {
     margin-left: 0 !important;
