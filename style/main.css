@@ -344,3 +344,11 @@ form > div {
     width: 36px !important;
     flex: none !important;
 }
+.add-el {
+    color: black !important;
+    border-width: 2px !important;
+    background-color: white !important;
+}
+.add-el:hover {
+    background-color: unset;
+}

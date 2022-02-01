@@ -9,6 +9,6 @@ $(document).ready(function(){
             $('.pay-block').hide(500);
         }
     }
-    $('#Country').on('change', langAct());
+    $('#Country').on('change', langAct);
 });
 

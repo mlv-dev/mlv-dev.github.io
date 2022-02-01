@@ -6,10 +6,10 @@ $(document).ready(function(){
 
     let current_state = {}
     // on create: (only first type)
-    $("#Category").append('<option selected disabled value="none"></option>')
+    $("select[num='1']").append('<option selected disabled value="none"></option>')
     for (let key of Object.keys(vehicle_types)) {
         const key_text = keyToText(key);
-        $("#Category").append('<option value="' + key + '">' + key_text + '</option>')
+        $("select[num='1']").append('<option value="' + key + '">' + key_text + '</option>')
     }
     for(let i = 2; i <= max_level; i++) {
         const elem = `.form-select[num=${i}]`;
@@ -50,50 +50,49 @@ function keyToText(key) {
 }
 
 const vehicle_types = {
-    participant: {
-        race: {
+    race: {
+        bike: {
             bike: {
-                bike: {
-                    rally2 : {},
-                    g_moto: {},
-                    rallygp: {},
-                },
+                rally2 : {},
+                g_moto: {},
+                rallygp: {},
             },
+        },
+        quad: {
             quad: {
-                quad: {
-                    x: {}
-                },
+                x: {}
             },
-            car: {
-                t1: {
-                    t1_1: {},
-                    t1_2: {},
-                    t1_3: {},
-                },
-                t2: {
-                    x: {}
-                },
-                t3: {
-                    x: {}
-                },
-                t4: {
-                    x: {}
-                },
-                open: {
-                    t1_0: {},
-                    t2_0: {},
-                    t3_0: {},
-                    t4_0: {}
-                }
+        },
+        car: {
+            t1: {
+                t1_1: {},
+                t1_2: {},
+                t1_3: {},
             },
-            truck: {
-                truck: {
-                    t5: {},
-                    t5_0: {}
-                }
+            t2: {
+                x: {}
+            },
+            t3: {
+                x: {}
+            },
+            t4: {
+                x: {}
+            },
+            open: {
+                t1_0: {},
+                t2_0: {},
+                t3_0: {},
+                t4_0: {}
             }
         },
-        service: {
+        truck: {
+            truck: {
+                t5: {},
+                t5_0: {}
+            }
+        }
+    },
+    service: {
             car: {
                 t6_3_5: {
                     _4x4: {},
@@ -119,7 +118,6 @@ const vehicle_types = {
                 }
             }
         }
-    },
 }
 const translations = {
     ru: {
