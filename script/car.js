@@ -45,8 +45,7 @@ $(document).ready(function(){
 });
 
 function keyToText(key) {
-    const obj = translations[lang];
-    return key in obj ? translations[lang][key] : key;
+    return key;
 }
 
 const vehicle_types = {
@@ -118,28 +117,4 @@ const vehicle_types = {
                 }
             }
         }
-}
-const translations = {
-    ru: {
-        participant: 'Участники',
-        // press: 'пресса',
-        // tourists: 'туристы',
-        _4x4: '4x4',
-        t6_3_5: 'T6-3.5',
-        t7_3_5: 'T7-3.5',
-        race: 'Гонщики',
-        service: 'Обсуживание',
-        bike: 'Байк',
-        quad: 'Квадроцикл',
-        car: 'Машина',
-        truck: 'Грузовик',
-        trailer: 'Трейлер',
-        open: 'Открыто',
-        van: 'Фургон',
-        camper: 'Кемпер',
-        small_truck: 'Небольшой грузовик',
-        small_bus: 'Небольшой автобус',
-        bus: 'Автобус',
-        // and so on...
-    },
 }
