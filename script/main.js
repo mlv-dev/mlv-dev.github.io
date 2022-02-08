@@ -14,4 +14,21 @@ $(document).ready(function(){
         "color" : "rgba(var(--bs-danger-rgb),var(--bs-text-opacity))"
     });
 
+    function enOnly() {
+        let old = this.value
+        this.value = old.replace(/[^a-zA-Z0-9 -]/ig,'');
+        let tooltip = bootstrap.Tooltip.getInstance(this)
+        if (this.value !== old) {
+            tooltip.show()
+            setTimeout(() => {
+                tooltip.hide()
+            }, 1000);
+        }
+        // else {
+        //     tooltip.hide()
+        // }
+    }
+    $('.en-only, input').on('keyup', enOnly);
+
+    $('.en-only, input').tooltip({'trigger':'manual', 'title': 'Ни слова по русски!'});
 });
