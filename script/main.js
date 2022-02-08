@@ -31,7 +31,7 @@ $(document).ready(function(){
     $('.en-only').on('keyup', enOnly);
     $('.en-only').tooltip({'trigger':'manual', 'title': 'Ни слова по русски!'});
 
-    $('.test0').on('click', '.radio', function() {
+    $('.multibox').on('click', '.form-check-input', function() {
         if ($(this).attr('c')) {
             $(this).removeAttr('c');
             $(this).prop('checked', false);
@@ -39,7 +39,7 @@ $(document).ready(function(){
             $(this).attr('c', true);
             $(this).prop('checked', true);
         }
-        $(this).siblings('.radio').removeAttr('c');
-        $(this).siblings('.radio').prop('checked', false);
+        $(this).siblings('.form-check-input').removeAttr('c');
+        $(this).siblings('.form-check-input').prop('checked', false);
     });
 });
