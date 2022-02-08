@@ -7,9 +7,9 @@ $(document).ready(function() {
     //     showCaption: false,
     //     // msgPlaceholder: "aaaa",
     // });
-    $("#input-id").fileinput({showCaption: false, dropZoneEnabled: false});
+    $('.photo-upload').fileinput({showCaption: false, dropZoneEnabled: false});
 
-    $('#input-id').on('change', (e) => {
+    $('.photo-upload').on('change', (e) => {
         const file = e.target.files[0];
 
         if (!file) {

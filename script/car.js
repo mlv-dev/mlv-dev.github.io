@@ -49,71 +49,71 @@ function keyToText(key) {
 }
 
 const vehicle_types = {
-    race: {
-        bike: {
-            bike: {
-                rally2 : {},
-                g_moto: {},
-                rallygp: {},
+    "RACE": {
+        "BIKE": {
+            "BIKE": {
+                "RALLY2" : {},
+                "G-MOTO": {},
+                "RALLYGP": {},
             },
         },
-        quad: {
-            quad: {
-                x: {}
+        "QUAD": {
+            "QUAD": {
+                "X": {}
             },
         },
-        car: {
-            t1: {
-                t1_1: {},
-                t1_2: {},
-                t1_3: {},
+        "CAR": {
+            "T1": {
+                "T1.1": {},
+                "T1.2": {},
+                "T.3": {},
             },
-            t2: {
-                x: {}
+            "T2": {
+                "X": {}
             },
-            t3: {
-                x: {}
+            "T3": {
+                "X": {}
             },
-            t4: {
-                x: {}
+            "T4": {
+                "X": {}
             },
-            open: {
-                t1_0: {},
-                t2_0: {},
-                t3_0: {},
-                t4_0: {}
+            "OPEN": {
+                "T1.O": {},
+                "T2.O": {},
+                "T3.O": {},
+                "T4.O": {}
             }
         },
-        truck: {
-            truck: {
-                t5: {},
-                t5_0: {}
+        "TRUCK": {
+            "TRUCK": {
+                "T5": {},
+                "T5.O": {}
             }
         }
     },
-    service: {
-            car: {
-                t6_3_5: {
-                    _4x4: {},
-                    van: {},
-                    camper: {},
-                    small_truck: {},
-                    small_bus: {},
+    "SERVICE": {
+            "CAR": {
+                "T6 -3.5": {
+                    "4x4": {},
+                    "VAN": {},
+                    "CAMPER": {},
+                    "SMALL TRUCK": {},
+                    "SMALL BUS": {},
                 }
             },
-            truck: {
-                t7_3_5: {
-                    truck: {},
-                    bus: {},
-                    camper: {}
+            "TRUCK": {
+                "T7 +3.5": {
+                    "TRUCK": {},
+                    "BUS": {},
+                    "CAMPER": {}
                 }
             },
-            trailer: {
-                t6_3_5: {
-                    trailer: {},
+            "TRAILER": {
+                "T6 -3.5": {
+                    "TRAILER": {},
                 },
-                t7_3_5: {
-                    trailer: {}
+                "T7 +3.5": {
+                    "TRAILER": {}
                 }
             }
         }

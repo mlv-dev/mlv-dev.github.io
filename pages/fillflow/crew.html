@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--  jQuery -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="//cdn.jsdelivr.net/jquery.dirtyforms/2.0.0/jquery.dirtyforms.min.js"></script>
+
+    <!--  User files -->
+    <link rel="stylesheet" href="/style/main.css">
+    <script defer src="/script/main.js"></script>
+
+    <!--  Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!--  Date picker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css" integrity="sha512-TQQ3J4WkE/rwojNFo6OJdyu6G8Xe9z8rMrlF9y7xpFbQfW5g8aSWcygCQ4vqRiJqFsDsE1T6MoAOMJkFXlrI9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.ru.min.js"></script>
+
+    <!--  Form helper - phone  -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js" integrity="sha512-m4xvGpNhCfricSMGJF5c99JBI8UqWdIlSmybVLRPo+LSiB9FHYH73aHzYZ8EdlzKA+s5qyv0yefvkqjU2ErLMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.min.css" integrity="sha512-fHutzlvDWRXol9PbR1+DHHLgwFCwkN730wN2HAeioUopGWuOk7jz0Mo4yXf/J4T7YrHISYWL0DF/73VmM3FcZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+
+    <!-- File upload -->
+    <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.7/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+    <script defer src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.2.7/js/fileinput.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/compressorjs/1.1.1/compressor.min.js" integrity="sha512-VaRptAfSxXFAv+vx33XixtIVT9A/9unb1Q8fp63y1ljF+Sbka+eMJWoDAArdm7jOYuLQHVx5v60TQ+t3EA8weA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="/script/file.js"></script>
+
+    <title>Title</title>
+</head>
+<body>
+<div class="header">
+    <div class="container navbar-container">
+        <div class="navbar-left">
+            <a class="a-btn" href="/">
+                <img class="navbar-logo" src="https://silkwayrally.com/media/uploads/2020/08/logoblok_red_hor.png" alt="Международное ралли «Шёлковый путь»">
+            </a>
+        </div>
+        <div class="navbar-right">
+            <!--suppress HtmlUnknownTarget -->
+            <a class="feedback a-btn nav-btn" href="/feedback">
+                <img class="nav-icon" src="https://i.ibb.co/nBSPHXR/free-icon-carrier-pigeon-6258758-2.png" alt="Feedback">
+                <div class="feedback-text">Обратная связь</div>
+            </a>
+            <div class="lang-buttons btn-group btn-group-toggle">
+                <a class="nav-btn a-btn lang-btn active-btn" href="?lang=ru">
+                    <img class="lang-logo" src="http://flag.kremlin.ru/static/img/svg/flag.svg?e6efb77a91" alt="">
+                    <div class="lang-name">RU</div>
+                </a>
+                <a class="nav-btn a-btn lang-btn" href="?lang=en">
+                    <img class="lang-logo" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="">
+                    <div class="lang-name">EN</div>
+                </a>
+            </div>
+            <!--suppress HtmlUnknownTarget -->
+            <a class="exit a-btn nav-btn" href="/exit">
+                <img class="nav-icon" src="https://download.flaticon.com/download/icon/2081479?icon_id=2081479&author=280&team=280&keyword=Exit&pack=2081355&style=0&style_id=8&format=png&color=%23000000&colored=2&size=512&selection=1&premium=0&type=standard" alt="Exit">
+            </a>
+        </div>
+    </div>
+</div>
+<!-- main content   -->
+<div class="content-wrap">
+<div class="container content Fillflow-page">
+    <div class="page-wrap">
+        <div class="side-navbar">
+          <div class="team-gp gp">
+            <div class="team-el el">
+              <div class="btn-group">
+                <a href="requisites.html" class="btn-danger btn">Команда 1</a>
+                <button type="button" class="btn btn-danger t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              </div>
+              <div class="car-gp gp">
+                <div class="car-el el">
+                  <div class="btn-group">
+                    <a href="car.html" class="btn-warning btn">Машина 1</a>
+                    <button type="button" class="btn btn-warning t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                  </div>
+                  <div class="crew-gp gp">
+                    <div class="crew-el el">
+                      <div class="btn-group">
+                        <a href="crew.html" class="btn-success btn">Человек 1</a>
+                      </div>
+                    </div>
+                    <div class="crew-el el">
+                      <div class="btn-group">
+                        <a href="crewN.html" class="btn-success btn add-el">Добавить человека</a>
+                      </div>
+                    </div>
+                    <div class="crew-el el">
+                      <div class="btn-group">
+                        <a href="crewN.html" class="btn-info btn add-el">Добавить прицеп</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="car-el el">
+                  <div class="btn-group">
+                    <a href="carN.html" class="btn-warning btn add-el">Добавить машину</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="team-el el">
+              <div class="btn-group">
+                <a href="requisites2.html" class="btn-danger btn">Команда 2</a>
+                <button type="button" class="btn btn-danger t-edge dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+              </div>
+              <div class="car-gp gp">
+                Empty
+              </div>
+            </div>
+            <div class="team-el el">
+              <div class="btn-group">
+                <a href="requisitesN.html" class="btn-danger btn add-el">Добавить команду</a>
+              </div>
+            </div>
+          </div>
+        
+        
+        </div>
+        <div class="mobile-open-navbar"><</div>
+        <script defer src="/script/fillflow2.js"></script>
+        <div class="Fillflow-page-content">
+
+            <h4 class="headline">Данные Экипажа</h4>
+            <form action="/Team/EditUser" class="prevent-unsaved" method="post">
+                <input data-val="true" data-val-required="The Id field is required." id="Id" name="Id" type="hidden" value="0"><input data-val="true" data-val-required="The CarId field is required." id="CarId" name="CarId" type="hidden" value="13">            <div>
+                <label for="Surname">Фамилия на английском</label>
+                <input value="" data-val="true" data-val-length="The field Фамилия на английском must be a string with a maximum length of 50." data-val-length-max="50" data-val-required="The Фамилия на английском field is required." id="Surname" name="Surname" type="text">
+                <span class="field-validation-valid" data-valmsg-for="Surname" data-valmsg-replace="true"></span>
+            </div>
+                <div>
+                    <label for="Name">Имя на английском</label>
+                    <input value="" data-val="true" data-val-length="The field Имя на английском must be a string with a maximum length of 50." data-val-length-max="50" data-val-required="The Имя на английском field is required." id="Name" name="Name" type="text">
+                    <span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                </div>
+                <div>
+                    <label for="Position">Должность</label>
+                    <input value="" data-val="true" data-val-length="The field Должность must be a string with a maximum length of 50." data-val-length-max="50" id="Position" name="Position" type="text">
+                    <span class="field-validation-valid" data-valmsg-for="Position" data-valmsg-replace="true"></span>
+                </div>
+                <div>
+                    <label for="Gender">Пол</label>
+                    <select data-val="true" data-val-required="The Пол field is required." id="Gender" name="Gender"><option selected="selected" value="-1">Выберите</option>
+                        <option value="0">Женский</option>
+                        <option value="1">Мужской</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="Date">Дата рождения</label>
+                    <input value="" id="Date" name="Date" type="text">
+                    <span class="field-validation-valid" data-valmsg-for="Date" data-valmsg-replace="true"></span>
+                </div>
+                <div>
+                    <label for="Registration">Регистрация (прописка)</label>
+                    <input value="" data-val="true" data-val-length="The field Регистрация (прописка) must be a string with a maximum length of 50." data-val-length-max="50" id="Registration" name="Registration" type="text">
+                    <span class="field-validation-valid" data-valmsg-for="Registration" data-valmsg-replace="true"></span>
+                </div>
+                <div>
+                    <label for="Country">Страна</label>
+                    <select data-val="true" data-val-length="The field Страна must be a string with a maximum length of 50." data-val-length-max="50" id="Country" name="Country"><option selected="selected" value="Выберите страну . . .">Выберите страну . . .</option>
+                        <option value="Австрия">Австрия</option>
+                        <option value="Алжир">Алжир</option>
+                        <option value="Андорра">Андорра</option>
+                        <option value="Аргентина">Аргентина</option>
+                        <option value="Армения">Армения</option>
+                        <option value="Беларусь">Беларусь</option>
+                        <option value="Бельгия">Бельгия</option>
+                        <option value="Болгария">Болгария</option>
+                        <option value="Бразилия">Бразилия</option>
+                        <option value="Великобритания">Великобритания</option>
+                        <option value="Венгрия">Венгрия</option>
+                        <option value="Германия">Германия</option>
+                        <option value="Гонконг">Гонконг</option>
+                        <option value="Гренландия">Гренландия</option>
+                        <option value="Греция">Греция</option>
+                        <option value="Грузия">Грузия</option>
+                        <option value="Дания">Дания</option>
+                        <option value="Египет">Египет</option>
+                        <option value="Замбия">Замбия</option>
+                        <option value="Израиль">Израиль</option>
+                        <option value="Индия">Индия</option>
+                        <option value="Индонезия">Индонезия</option>
+                        <option value="Иордания">Иордания</option>
+                        <option value="Ирак">Ирак</option>
+                        <option value="Иран">Иран</option>
+                        <option value="Ирландия">Ирландия</option>
+                        <option value="Исландия">Исландия</option>
+                        <option value="Испания">Испания</option>
+                        <option value="Италия">Италия</option>
+                        <option value="Йемен">Йемен</option>
+                        <option value="Казахстан">Казахстан</option>
+                        <option value="Камбоджа">Камбоджа</option>
+                        <option value="Камерун">Камерун</option>
+                        <option value="Канада">Канада</option>
+                        <option value="Катар">Катар</option>
+                        <option value="Кения">Кения</option>
+                        <option value="Кипр">Кипр</option>
+                        <option value="Киргизия">Киргизия</option>
+                        <option value="Китай">Китай</option>
+                        <option value="Колумбия">Колумбия</option>
+                        <option value="Конго">Конго</option>
+                        <option value="Корея, Республика">Корея, Республика</option>
+                        <option value="Куба">Куба</option>
+                        <option value="Лаос">Лаос</option>
+                        <option value="Латвия">Латвия</option>
+                        <option value="Лесото">Лесото</option>
+                        <option value="Ливан">Ливан</option>
+                        <option value="Литва">Литва</option>
+                        <option value="Люксембург">Люксембург</option>
+                        <option value="Маврикий">Маврикий</option>
+                        <option value="Мадагаскар">Мадагаскар</option>
+                        <option value="Малайзия">Малайзия</option>
+                        <option value="Марокко">Марокко</option>
+                        <option value="Мексика">Мексика</option>
+                        <option value="Молдова, Республика">Молдова, Республика</option>
+                        <option value="Монако">Монако</option>
+                        <option value="Монголия">Монголия</option>
+                        <option value="Непал">Непал</option>
+                        <option value="Нигер">Нигер</option>
+                        <option value="Нигерия">Нигерия</option>
+                        <option value="Нидерланды">Нидерланды</option>
+                        <option value="Никарагуа">Никарагуа</option>
+                        <option value="Новая Зеландия">Новая Зеландия</option>
+                        <option value="Норвегия">Норвегия</option>
+                        <option value="Объединенные Арабские Эмираты">Объединенные Арабские Эмираты</option>
+                        <option value="Пакистан">Пакистан</option>
+                        <option value="Перу">Перу</option>
+                        <option value="Польша">Польша</option>
+                        <option value="Португалия">Португалия</option>
+                        <option value="Республика Конго">Республика Конго</option>
+                        <option value="Россия">Россия</option>
+                        <option value="Румыния">Румыния</option>
+                        <option value="Саудовская Аравия">Саудовская Аравия</option>
+                        <option value="Сенегал">Сенегал</option>
+                        <option value="Сербия">Сербия</option>
+                        <option value="Сингапур">Сингапур</option>
+                        <option value="Словакия">Словакия</option>
+                        <option value="Словения">Словения</option>
+                        <option value="США">США</option>
+                        <option value="Таджикистан">Таджикистан</option>
+                        <option value="Таиланд">Таиланд</option>
+                        <option value="Тунис">Тунис</option>
+                        <option value="Туркмения">Туркмения</option>
+                        <option value="Турция">Турция</option>
+                        <option value="Узбекистан">Узбекистан</option>
+                        <option value="Украина">Украина</option>
+                        <option value="Уругвай">Уругвай</option>
+                        <option value="Филиппины">Филиппины</option>
+                        <option value="Финляндия">Финляндия</option>
+                        <option value="Франция">Франция</option>
+                        <option value="Хорватия">Хорватия</option>
+                        <option value="Черногория">Черногория</option>
+                        <option value="Чешская республика">Чешская республика</option>
+                        <option value="Чили">Чили</option>
+                        <option value="Швейцария">Швейцария</option>
+                        <option value="Швеция">Швеция</option>
+                        <option value="Эстония">Эстония</option>
+                        <option value="Эфиопия">Эфиопия</option>
+                        <option value="Южная Африка">Южная Африка</option>
+                        <option value="Япония">Япония</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="City">Город</label>
+                    <input value="" data-val="true" data-val-length="The field Город must be a string with a maximum length of 50." data-val-length-max="50" id="City" name="City" type="text">
+                    <span class="field-validation-valid" data-valmsg-for="City" data-valmsg-replace="true"></span>
+                </div>
+                <div>
+                    <label for="Street">Улица</label>
+                    <input value="" data-val="true" data-val-length="The field Улица must be a string with a maximum length of 50." data-val-length-max="50" id="Street" name="Street" type="text">
+                    <span class="field-validation-valid" data-valmsg-for="Street" data-valmsg-replace="true"></span>
+                </div>
+                <div>
+                    <label for="House">Дом</label>
+                    <input value="" data-val="true" data-val-length="The field Дом must be a string with a maximum length of 50." data-val-length-max="50" id="House" name="House" type="text">
+                    <span class="field-validation-valid" data-valmsg-for="House" data-valmsg-replace="true"></span>
+                </div>
+                <div>
+                    <label for="Kv">Квартира</label>
+                    <input value="" data-val="true" data-val-length="The field Квартира must be a string with a maximum length of 50." data-val-length-max="50" id="Kv" name="Kv" type="text">
+                    <span class="field-validation-valid" data-valmsg-for="Kv" data-valmsg-replace="true"></span>
+                </div>
+                <div>
+                    <label for="Citizenship">Гражданство</label>
+                    <input value="" data-val="true" data-val-length="The field Гражданство must be a string with a maximum length of 50." data-val-length-max="50" id="Citizenship" name="Citizenship" type="text">
+                    <span class="field-validation-valid" data-valmsg-for="Citizenship" data-valmsg-replace="true"></span>
+                </div>
+                <div>
+                    <label for="LastName">Фамилия на русском</label>
+                    <input value="" data-val="true" data-val-length="The field Фамилия на русском must be a string with a maximum length of 50." data-val-length-max="50" id="LastName" name="LastName" type="text">
+                    <span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+                </div>
+                <div>
+                    <label for="Name">Имя на английском</label>
+                    <input value="" id="Name" name="Name" type="text">
+                    <span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+                </div>
+                <div>
+                    <label for="SecondaryName">Отчество на русском</label>
+                    <input value="" data-val="true" data-val-length="The field Отчество на русском must be a string with a maximum length of 50." data-val-length-max="50" id="SecondaryName" name="SecondaryName" type="text">
+                    <span class="field-validation-valid" data-valmsg-for="SecondaryName" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group">
+                    <label for="Photo">Фото</label>
+                    <input name="NewPhoto" data-show-upload="false" data-allowed-file-types="images" type="file" class="file photo-upload" data-browse-on-zone-click="true" accept="image/*" data-show-preview="false">
+                </div>
+                <div class="accordion" id="accordion1">
+                    <div class="accordion-item">
+                        <div id="heading1_1" class="accordion-header">
+                            <button data-bs-target="#collapse1_1" aria-controls="collapse1_1" class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true">
+                                Контактные данные
+                            </button>
+                        </div>
+                        <div id="collapse1_1" data-bs-parent="#accordion1" aria-labelledby="heading1_1" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div>
+                                    <label for="Phone">Телефон</label>
+                                    <input value="" data-val="true" data-val-length="The field Телефон must be a string with a maximum length of 50." data-val-length-max="50" id="Phone" name="Phone" type="text">
+                                    <span class="field-validation-valid" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+                                </div>
+                                <div>
+                                    <label for="Email">E-mail</label>
+                                    <input value="" data-val="true" data-val-length="The field E-mail must be a string with a maximum length of 50." data-val-length-max="50" id="Email" name="Email" type="text">
+                                    <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div id="heading1_2" class="accordion-header">
+                            <button data-bs-target="#collapse1_2" aria-controls="collapse1_2" class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true">
+                                Загран. паспорт
+                            </button>
+                        </div>
+                        <div id="collapse1_2"  data-bs-parent="#accordion1" aria-labelledby="heading1_2" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div>
+                                    <label for="PassportInternational">Загранпаспорт</label>
+                                    <input value="" data-val="true" data-val-length="The field Загранпаспорт must be a string with a maximum length of 50." data-val-length-max="50" id="PassportInternational" name="PassportInternational" type="text">
+                                    <span class="field-validation-valid" data-valmsg-for="PassportInternational" data-valmsg-replace="true"></span>
+                                </div>
+                                <div>
+                                    <label for="PassportInternationalDateStart">Дата выдачи загранпаспорта</label>
+                                    <input value="" id="PassportInternationalDateStart" name="PassportInternationalDateStart" type="text">
+                                    <span class="field-validation-valid" data-valmsg-for="PassportInternationalDateStart" data-valmsg-replace="true"></span>
+                                </div>
+                                <div>
+                                    <label for="PassportInternationalDateEnd">Срок действия загранпаспорта</label>
+                                    <input value="" id="PassportInternationalDateEnd" name="PassportInternationalDateEnd" type="text">
+                                    <span class="field-validation-valid" data-valmsg-for="PassportInternationalDateEnd" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="PhotoPassportInternational">Загранпаспорт</label>
+                                    <input data-show-upload="false" data-allowed-file-types="images" name="NewPhotoPassportInternationals-id" type="file" class="file photo-upload" data-browse-on-zone-click="true" accept="image/*" data-show-preview="false">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="fillflow-navbar-wrap">
+                    <ul class="fillflow-navbar">
+
+                        <li><a href="/Team" class="btn-danger">Паспорт</a></li>
+                        <li><a href="/Team" class="btn-info">ВУ</a></li>
+                        <li><a href="/Team" class="btn-info">Спортивные документы</a></li>
+                        <li><a href="/Team" class="btn-info">Медицинская история</a></li>
+                    </ul>
+                </nav>
+                <span class="field-validation-valid" data-valmsg-for="" data-valmsg-replace="true"></span>            <input type="submit" value="Сохранить" class="test">
+            </form>
+        </div>
+    </div>
+    </div>
+    </body>
+    </html>
