@@ -28,7 +28,18 @@ $(document).ready(function(){
         //     tooltip.hide()
         // }
     }
-    $('.en-only, input').on('keyup', enOnly);
+    $('.en-only').on('keyup', enOnly);
+    $('.en-only').tooltip({'trigger':'manual', 'title': 'Ни слова по русски!'});
 
-    $('.en-only, input').tooltip({'trigger':'manual', 'title': 'Ни слова по русски!'});
+    $('.test0').on('click', '.radio', function() {
+        if ($(this).attr('c')) {
+            $(this).removeAttr('c');
+            $(this).prop('checked', false);
+        } else {
+            $(this).attr('c', true);
+            $(this).prop('checked', true);
+        }
+        $(this).siblings('.radio').removeAttr('c');
+        $(this).siblings('.radio').prop('checked', false);
+    });
 });
