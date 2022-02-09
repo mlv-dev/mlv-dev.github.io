@@ -1,13 +1,26 @@
-let lang = "ru";
+
 
 $(document).ready(function(){
     $(".prevent-unsaved").dirtyForms();
 
+
+    langCheck();
     validationLogic();
     datepickerLogic();
     enOnlyLogic();
     multiboxLogic();
 
+    function langCheck() {
+        let userLang = navigator.language || navigator.userLanguage;
+        let shortUserLang = userLang.split('-')[0];
+        let pageLang = $('html').attr('lang');
+        let searchParams = new URLSearchParams(window.location.search);
+        let urlLang = searchParams.get('lang');
+        // Second check to prevent infinite reload if lang does not exist
+        if (pageLang !== shortUserLang && urlLang !== shortUserLang)
+            window.location.replace(`?lang=${shortUserLang}`);
+        }
+    }
     function validationLogic() {
         $(".input-validation-error").parent().css({
             "--bs-text-opacity": "1",
