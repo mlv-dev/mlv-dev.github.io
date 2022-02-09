@@ -299,9 +299,6 @@ form > div {
     .mobile-open-navbar {
         /*display: flex !important;*/
     }
-    .page-wrap {
-        flex-direction: column;
-    }
     .btn-group {
         width: 100% !important;
     }
@@ -320,6 +317,7 @@ form > div {
 .page-wrap {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 .side-navbar .el {
     margin-bottom: 10px;
@@ -351,4 +349,27 @@ form > div {
 }
 .add-el:hover {
     background-color: unset;
+}
+/* ------------------------------- */
+.nav-cards > .card {
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
+}
+.navcard-status {
+    display: flex;
+    align-items: center;
+}
+.navcard-icon {
+    align-self: center;
+    width: 60px;
+    height: 60px;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+.add-team h5 {
+    text-align: center;
+    margin-top: 10px;
 }
