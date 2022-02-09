@@ -131,13 +131,12 @@
         <h4 class="headline">Данные ТС</h4>
         <form class="vehicle-form prevent-unsaved" method="post">
             <div class="form-group multibox">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="face" id="face1" value="face1" />
-                    <label class="form-check-label" for="face1">Физлицо</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="face" id="face2" value="face2" />
-                    <label class="form-check-label" for="face2">Юрлицо</label>
+                <div class="d-none">
+                    <select data-val="true" data-val-required="The Юрлицо? field is required." id="OOO" name="OOO">
+                        <option selected="selected" value="-1">Выберите</option>
+                        <option value="0">Юридическое лицо</option>
+                        <option value="1">Физическое лицо</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group">
