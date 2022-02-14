@@ -31,26 +31,29 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/compressorjs/1.1.1/compressor.min.js" integrity="sha512-VaRptAfSxXFAv+vx33XixtIVT9A/9unb1Q8fp63y1ljF+Sbka+eMJWoDAArdm7jOYuLQHVx5v60TQ+t3EA8weA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="/script/file.js"></script>
 
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <title>Title</title>
 </head>
 <body>
-<div class="header">
-    <div class="container navbar-container">
-        <div class="navbar-left">
-            <a class="a-btn" href="/">
-                <img class="navbar-logo" src="https://silkwayrally.com/media/uploads/2020/08/logoblok_red_hor.png" alt="Международное ралли «Шёлковый путь»">
-            </a>
-        </div>
-        <div class="navbar-right">
-            <!--suppress HtmlUnknownTarget -->
-            <a class="exit a-btn nav-btn" href="/exit">
-                <img class="nav-icon" src="https://download.flaticon.com/download/icon/2081479?icon_id=2081479&author=280&team=280&keyword=Exit&pack=2081355&style=0&style_id=8&format=png&color=%23000000&colored=2&size=512&selection=1&premium=0&type=standard" alt="Exit">
-            </a>
+<div class="wrap-not-footer">
+    <div class="header">
+        <div class="container navbar-container">
+            <div class="navbar-left">
+                <a class="a-btn" href="/">
+                    <img class="navbar-logo" src="https://silkwayrally.com/media/uploads/2020/08/logoblok_red_hor.png" alt="Международное ралли «Шёлковый путь»">
+                </a>
+            </div>
+            <div class="navbar-right">
+                <!--suppress HtmlUnknownTarget -->
+                <a class="exit btn btn-danger a-btn nav-btn" href="/exit">
+                    <img class="nav-icon" src="https://download.flaticon.com/download/icon/2081479?icon_id=2081479&author=280&team=280&keyword=Exit&pack=2081355&style=0&style_id=8&format=png&color=%23000000&colored=2&size=512&selection=1&premium=0&type=standard" alt="Exit">
+                </a>
+            </div>
         </div>
     </div>
-</div>
-<!-- main content   -->
-<!--<div class="content-wrap">-->
+    <!-- main content   -->
+    <!--<div class="content-wrap">-->
 <div class="Reg content container">
     <h4 class="headline">Регистрация в личном кабинете</h4>
     <form class="prevent-unsaved">
@@ -123,7 +126,7 @@
 <!--        </div>-->
         <div class="form-group">
             <label for="contact-date">День связи</label>
-            <input type="text" class="form-control" id="contact-date">
+            <input type="text" class="form-control datepicker" id="contact-date">
         </div>
         <div class="form-group form-check">
             <input type="checkbox" checked class="form-check-input" id="get-emails">
@@ -134,23 +137,24 @@
         </div>
     </form>
 </div>
-<!--</div>-->
+</div>
+
 <div class="footer">
     <div class="container navbar-container">
         <div class="navbar-left">
         </div>
         <div class="navbar-right">
             <!--suppress HtmlUnknownTarget -->
-            <a class="feedback a-btn nav-btn" href="/feedback">
+            <a class="feedback btn btn-danger a-btn nav-btn" href="/feedback">
                 <img class="nav-icon" src="https://i.ibb.co/nBSPHXR/free-icon-carrier-pigeon-6258758-2.png" alt="Feedback">
                 <div class="feedback-text">Обратная связь</div>
             </a>
             <div class="lang-buttons btn-group btn-group-toggle">
-                <a class="nav-btn a-btn lang-btn active-btn" href="?lang=ru">
+                <a class="nav-btn lang-btn btn a-btn btn-danger" href="?culture=ru" lang-info="ru">
                     <img class="lang-logo" src="http://flag.kremlin.ru/static/img/svg/flag.svg?e6efb77a91" alt="">
                     <div class="lang-name">RU</div>
                 </a>
-                <a class="nav-btn a-btn lang-btn" href="?lang=en">
+                <a class="nav-btn lang-btn btn a-btn btn-danger" href="?culture=en" lang-info="en">
                     <img class="lang-logo" src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="">
                     <div class="lang-name">EN</div>
                 </a>
