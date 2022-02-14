@@ -253,3 +253,6 @@ a::before {
     opacity: 0;
     background-image: linear-gradient(90deg,#7141f1 0,#4d6bd8 70%,#3183e2 100%);
 }
+.Fillflow-page {
+    max-width: 1000px !important;
+}

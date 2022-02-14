@@ -130,45 +130,21 @@ $(document).ready(function(){
 
         // Rewrite script
 
-        let iOk = 0;
-        // Setup
         for(let i = 1; i <= max_level; i++) {
-            const elem = `.form-select[num='${i}']`;
-            const preselectedValue = $(elem).attr('value');
-
-            if (preselectedValue && preselectedValue !== 'null') {
-                // get obj list
-                let obj = vehicle_types;
-                for (let i2 = 1; i2 < i; i2++) {
-                    obj = obj[current_state[i2]];
-                }
-                const preselected_msg = preselectedValue ? '' : 'selected';
-
-                $(elem).append(`<option ${preselected_msg} value="null"></option>`);
-                if (obj) {
-                    for (let key of Object.keys(obj)) {
-                        const isSelected = (key === preselectedValue) ? 'selected' : '';
-                        if (isSelected) {
-                            current_state[i] = key;
-                        }
-                        $(elem).append(`<option ${isSelected} value="${key}">${key}</option>`);
-                    }
-                }
-                const elemN = `.form-select[num=${i+1}]`;
-                if (i !== max_level && !$(elemN).attr('value')) {
-
-                    processChange(i, preselectedValue);
-                }
-                iOk += 1;
-            } else if (i > iOk + 1) {
-                $(elem).parent().hide();
-            } else if (i === 1) {
+            if (i === 1) {
                 $("select[num='1']").append('<option selected value="null"></option>')
                 for (let key of Object.keys(vehicle_types)) {
                     $("select[num='1']").append('<option value="' + key + '">' + key + '</option>')
                 }
             }
-            // MUST BE SETTED ALL FIELDS
+
+            const select = `.form-select[num='${i}']`;
+            const selected = $(select).attr('value');
+            if (selected && selected !== 'null') {
+                $(select).find(`option[selected]`).removeAttr('selected');
+                $(select).find(`option[value='${selected}']`).attr('selected', 'selected');
+                processChange(i, selected);
+            }
         }
         // on change:
         $(".vehicle-form div select").on("change", (event) => {
