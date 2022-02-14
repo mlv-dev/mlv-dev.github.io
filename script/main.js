@@ -17,7 +17,7 @@ $(document).ready(function(){
         let cookieLang = $.cookie('current-lang');
 
         if (!cookieLang) {
-            $.cookie('current-lang', browserLang);
+            $.cookie('current-lang', browserLang, { expires: 7, path: '/' });
         }
         $(`.lang-buttons a[lang-info='${cookieLang}']`).addClass('active-btn');
 
@@ -26,7 +26,7 @@ $(document).ready(function(){
             let href = e.currentTarget.href;
             let url = new URL(href);
             let urlLang = url.searchParams.get('culture').split('-')[0];
-            $.cookie('current-lang', urlLang);
+            $.cookie('current-lang', urlLang, { expires: 7, path: '/' });
             return true;
         })
     }
