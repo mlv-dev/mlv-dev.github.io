@@ -136,7 +136,7 @@ $(document).ready(function(){
             const elem = `.form-select[num='${i}']`;
             const preselectedValue = $(elem).attr('value');
 
-            if (preselectedValue) {
+            if (preselectedValue && preselectedValue !== 'null') {
                 // get obj list
                 let obj = vehicle_types;
                 for (let i2 = 1; i2 < i; i2++) {
