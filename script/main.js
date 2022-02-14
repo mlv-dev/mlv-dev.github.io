@@ -163,7 +163,7 @@ $(document).ready(function(){
                     $(elem).empty();
                     if (i !== level + 1 || (i === level + 1 && value === 'null')) {
                         $(elem).parent().hide(fadeout_delay);
-                        $(elem).attr('value', 'null');
+                        // $(elem).attr('value', 'null');
                     }
                 }
                 if (value !== 'null') {
