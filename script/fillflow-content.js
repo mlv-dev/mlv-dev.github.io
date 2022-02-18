@@ -1,21 +1,14 @@
-$(document).ready(function () {
+
+
+$(document).ready(function(){
     function langAct(event) {
         let value = $('#Country').val();
-        const delay = 500;
-
         if (value === 'Россия') {
-            $('.pay-block').show(delay);
-            $('.swift-block').hide(delay);
+            $('.pay-block').show(500);
         } else {
-            $('.pay-block').hide(delay);
-            $('.swift-block').show(delay);
-        }
-        if (value === 'Выберите страну . . .') {
-            $('.pay-block').hide();
-            $('.swift-block').hide();
+            $('.pay-block').hide(500);
         }
     }
-
-    langAct();
     $('#Country').on('change', langAct);
 });
+
