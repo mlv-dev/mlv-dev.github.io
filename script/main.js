@@ -13,22 +13,24 @@ $(document).ready(function(){
     fileLogic();
 
     function langCheck() {
-        let browserLang = navigator.language.split('-')[0];
+        let browserLang = navigator.language.split('-')[0]
+        const searchParams = new URLSearchParams(window.location.search);
+        let urlLang = searchParams.get('lang');
         let cookieLang = $.cookie('current-lang');
 
-        if (!cookieLang) {
-            $.cookie('current-lang', browserLang, { expires: 7, path: '/' });
-        }
-        $(`.lang-buttons a[lang-info='${cookieLang}']`).addClass('active-btn');
+        let lang='';
 
-        $('.lang-btn').on('click', (e) => {
-            debugger;
-            let href = e.currentTarget.href;
-            let url = new URL(href);
-            let urlLang = url.searchParams.get('culture').split('-')[0];
-            $.cookie('current-lang', urlLang, { expires: 7, path: '/' });
-            return true;
-        })
+        if (searchParams.has('lang')) {
+            lang = urlLang;
+            $.cookie('current-lang', lang);
+        } else if (!!cookieLang) {
+            lang = cookieLang;
+        } else {
+            lang = browserLang;
+            $.cookie('current-lang', lang);
+        }
+        // activate
+        $(`.lang-buttons a[lang-info='${lang}']`).addClass('active-btn');
     }
     function validationLogic() {
         $(".input-validation-error").parent().css({
@@ -130,21 +132,45 @@ $(document).ready(function(){
 
         // Rewrite script
 
+        let iOk = 0;
+        // Setup
         for(let i = 1; i <= max_level; i++) {
-            if (i === 1) {
+            const elem = `.form-select[num='${i}']`;
+            const preselectedValue = $(elem).attr('value');
+
+            if (preselectedValue) {
+                // get obj list
+                let obj = vehicle_types;
+                for (let i2 = 1; i2 < i; i2++) {
+                    obj = obj[current_state[i2]];
+                }
+                const preselected_msg = preselectedValue ? '' : 'selected';
+
+                $(elem).append(`<option ${preselected_msg} value="null"></option>`);
+                if (obj) {
+                    for (let key of Object.keys(obj)) {
+                        const isSelected = (key === preselectedValue) ? 'selected' : '';
+                        if (isSelected) {
+                            current_state[i] = key;
+                        }
+                        $(elem).append(`<option ${isSelected} value="${key}">${key}</option>`);
+                    }
+                }
+                const elemN = `.form-select[num=${i+1}]`;
+                if (i !== max_level && !$(elemN).attr('value')) {
+
+                    processChange(i, preselectedValue);
+                }
+                iOk += 1;
+            } else if (i > iOk + 1) {
+                $(elem).parent().hide();
+            } else if (i === 1) {
                 $("select[num='1']").append('<option selected value="null"></option>')
                 for (let key of Object.keys(vehicle_types)) {
                     $("select[num='1']").append('<option value="' + key + '">' + key + '</option>')
                 }
             }
-
-            const select = `.form-select[num='${i}']`;
-            const selected = $(select).attr('value');
-            if (selected && selected !== 'null') {
-                $(select).find(`option[selected]`).removeAttr('selected');
-                $(select).find(`option[value='${selected}']`).attr('selected', 'selected');
-                processChange(i, selected);
-            }
+            // MUST BE SETTED ALL FIELDS
         }
         // on change:
         $(".vehicle-form div select").on("change", (event) => {
@@ -163,7 +189,7 @@ $(document).ready(function(){
                     $(elem).empty();
                     if (i !== level + 1 || (i === level + 1 && value === 'null')) {
                         $(elem).parent().hide(fadeout_delay);
-                        // $(elem).attr('value', 'null');
+                        $(elem).attr('value', 'null');
                     }
                 }
                 if (value !== 'null') {
